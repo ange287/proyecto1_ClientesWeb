@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Matrices</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora de Matrices</h1>
+
+    <!-- Inputs para el tamaño de las matrices -->
+    <div>
+        <label for="filas1">Filas Matriz 1:</label>
+        <input type="number" id="filas1" min="1">
+        <label for="columnas1">Columnas Matriz 1:</label>
+        <input type="number" id="columnas1" min="1">
+        <button onclick="crearMatriz(1)">Crear Matriz 1</button>
+        <button onclick="eliminarMatriz(1)">Eliminar Matriz 1</button>
+
+
+    </div>
+
+    <div>
+        <label for="filas2">Filas Matriz 2:</label>
+        <input type="number" id="filas2" min="1">
+        <label for="columnas2">Columnas Matriz 2:</label>
+        <input type="number" id="columnas2" min="1">
+        <button onclick="crearMatriz(2)">Crear Matriz 2</button>
+        <button onclick="eliminarMatriz(2)">Eliminar Matriz 2</button>
+    </div>
+
+    <!-- Contenedores para las matrices -->
+    <div id="contenedor-matriz1" class="contenedor-matriz oculto"></div>
+    <div id="contenedor-matriz2" class="contenedor-matriz oculto"></div>
+
+    <!-- Botones de operaciones -->
+    <div>
+        <button onclick="sumarMatrices()">Sumar</button>
+        <button onclick="restarMatrices()">Restar</button>
+        <button onclick="multiplicarMatrices()">Multiplicar</button>
+    </div>
+
+</body>
+</html>
