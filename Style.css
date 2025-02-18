@@ -1,0 +1,138 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9d1e8; /* Fondo lila claro */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Aplicar la fuente al h1 */
+h1 {
+    font-family: 'Pacifico', cursive; /* Usa la fuente Pacifico */
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para un efecto más llamativo */
+}
+
+/* Estilos para los contenedores de las matrices */
+.contenedor-matriz {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-matriz input {
+    width: 50px;
+    margin: 2px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #821d99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #f342bb;
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
+}
+
+button:focus {
+    background-color: #dd3b71; /* Cambio de color al seleccionar */
+    outline: none;
+    animation: pulse 0.5s ease-in-out; /* Animación al seleccionar */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilos para las etiquetas */
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Estilos para los inputs de tamaño de matriz */
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Estilos para el contenedor de resultado */
+#contenedor-resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+#resultado table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#resultado td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Estilos para los mensajes de error o información */
+#resultado {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+/* Clase para ocultar elementos */
+.oculto {
+    display: none;
+}
+
+/* Estilos para las operaciones específicas de cada matriz */
+.opmatriz1, .opmatriz2 {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.opmatriz1 button, .opmatriz2 button {
+    background-color: #c5059f;
+    margin: 5px;
+}
+
+.opmatriz1 button:hover, .opmatriz2 button:hover {
+    background-color: #763391;
+}
