@@ -39,7 +39,33 @@
         <button onclick="sumarMatrices()">Sumar</button>
         <button onclick="restarMatrices()">Restar</button>
         <button onclick="multiplicarMatrices()">Multiplicar</button>
+        <input type="number" id="escalar" placeholder="Escalar">
     </div>
 
+    <!-- Botones de operaciones (ocultos inicialmente) -->
+    <div id="operaciones" >
+        <div class="opmatriz1" style="display: none;">
+            <button onclick="multiplicarPorEscalar(1)">Multiplicar matriz 1 por Escalar</button>
+            <button onclick="calcularTranspuesta(1)">Transpuesta Matriz 1</button>
+            <button onclick="calcularDeterminante(1)">Determinante Matriz 1</button>
+            <button onclick="generarIdentidad(1)">Generar Identidad Matriz 1</button>
+            <button onclick="calcularInversa(1)">Inversa Matriz 1</button>
+        </div>
+            <div class="opmatriz2" style="display: none;">
+            <button onclick="multiplicarPorEscalar(2)">Multiplicar matriz 2 por Escalar</button>
+            <button onclick="calcularTranspuesta(2)">Transpuesta Matriz 2</button>
+            <button onclick="calcularDeterminante(2)">Determinante Matriz 2</button>
+            <button onclick="generarIdentidad(2)">Generar Identidad Matriz 2</button>
+            <button onclick="calcularInversa(2)">Inversa Matriz 2</button>
+        </div>
+    </div>
+
+    <!-- Resultado -->
+    <div id="contenedor-resultado" class="contenedor-matriz ">
+        <h2>Resultado:</h2>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
