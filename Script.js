@@ -27,6 +27,7 @@ function crearMatriz(numeroMatriz) {
         for (let j = 0; j < columnas; j++) {
             const input = document.createElement("input");
             input.type = "number";
+            input.value=0
             input.id = `matriz${numeroMatriz}-${i}-${j}`;
             contenedor.appendChild(input);
         }
@@ -219,7 +220,7 @@ function calcularDeterminante(numeroMatriz) {
 
     // Validar que la matriz sea cuadrada
     if (filas !== columnas) {
-        alert("La matriz debe ser cuadrada (mismo número de filas y columnas) para calcular la determinante.");
+        alert("ERROR: no se puede obtener resultado");
         return;
     }
 
