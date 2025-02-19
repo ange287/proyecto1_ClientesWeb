@@ -6,6 +6,7 @@ function crearMatriz(numeroMatriz) {
     // Obtener filas y columnas
     const filas = parseInt(document.getElementById(`filas${numeroMatriz}`).value);
     const columnas = parseInt(document.getElementById(`columnas${numeroMatriz}`).value);
+    contador++;
 
     // Validar que los valores sean válidos
     if (isNaN(filas) || isNaN(columnas) || filas < 1 || columnas < 1) {
@@ -15,7 +16,11 @@ function crearMatriz(numeroMatriz) {
 
     // Obtener el contenedor de la matriz
     const contenedor = document.getElementById(`contenedor-matriz${numeroMatriz}`);
-    contenedor.innerHTML = ""; // Limpiar el contenedor
+    if (contador === 1) {
+        contenedor.innerHTML = "<h3>Matriz 1</h3>"; // Limpiar el contenedor
+    } else {
+        contenedor.innerHTML = "<h3>Matriz 2</h3>"; // Limpiar el contenedor
+    }
 
     // Crear los inputs para la matriz
     for (let i = 0; i < filas; i++) {
@@ -23,7 +28,6 @@ function crearMatriz(numeroMatriz) {
             const input = document.createElement("input");
             input.type = "number";
             input.id = `matriz${numeroMatriz}-${i}-${j}`;
-            input.placeholder = `M${numeroMatriz}[${i}][${j}]`; // Placeholder para indicar la posición
             contenedor.appendChild(input);
         }
         contenedor.appendChild(document.createElement("br")); // Salto de línea después de cada fila
@@ -443,4 +447,9 @@ function eliminarMatriz(numeroMatriz) {
 
     // Ocultar las operaciones asociadas a la matriz eliminada
     document.querySelector(`.opmatriz${numeroMatriz}`).style.display = "none";
+
+     // Limpiar el resultado
+     document.getElementById("resultado").innerHTML = "";
+     document.getElementById("contenedor-resultado").classList.add("oculto");
+     contador = 0;  
 }
